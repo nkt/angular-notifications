@@ -25,7 +25,7 @@
     "gulp-less": "*",
     "gulp-babel": "*"
   },
-  "main": "lib/index.js",
+  "main": "build/js/index.js",
   "directories": {
     "src": "src",
     "lib": "build"
