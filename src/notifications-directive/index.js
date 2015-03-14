@@ -4,9 +4,15 @@ function NotificationsDirective($timeout) {
   return {
     restrict: 'EA',
     template: require('./template.html'),
+    scope: {
+        iconPrefix: '@'
+    },
     link($scope) {
       let counter = 0;
       let notifications = $scope.notifications = [];
+
+      let prefix = $scope.iconPrefix || 'fa';
+      $scope.closeClass = `${prefix} ${prefix}-times`;
 
       $scope.$on('ngNotifications:notify', (event, type, message) => {
         let id = counter++;

@@ -2,6 +2,6 @@
     <div class="ng-notifications-notification" ng-repeat="notification in notifications"
          ng-class="'ng-notifications-type-' + notification.type">
         <span class="ng-notifications-message" ng-bind="notification.message"></span>
-        <span class="ng-notifications-close" ng-click="close(notification.id)"></span>
+        <span class="ng-notifications-close" ng-click="close(notification.id)" ng-class="closeClass"></span>
     </div>
 </div>
