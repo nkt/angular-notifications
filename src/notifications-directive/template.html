@@ -1,0 +1,7 @@
+<div class="ng-notifications-container" ng-if="notifications.length">
+    <div class="ng-notifications-notification" ng-repeat="notification in notifications"
+         ng-class="'ng-notification-type-' + notification.type">
+        <span class="ng-notifications-message" ng-bind="notification.message"></span>
+        <span class="ng-notifications-close" ng-click="close(notification.id)"></span>
+    </div>
+</div>

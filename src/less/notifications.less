@@ -1,0 +1,60 @@
+@import "variables";
+
+/**
+ * @link https://github.com/daneden/animate.css/blob/master/source/fading_entrances/fadeInDown.css
+ */
+@keyframes ng-notifications-fade-in-down {
+    0% {
+        transform: translate3d(0, -100%, 0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+.ng-notifications-container {
+    line-height: 60px;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 60px;
+}
+
+.ng-notifications-message {
+    padding: 0 12px;
+}
+
+.ng-notifications-close {
+    font-size: 12px;
+    margin: 0 auto;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.ng-notifications-notification {
+    font-size: 18px;
+    position: relative;
+    animation-name: ng-notifications-fade-in-down;
+    text-align: center;
+    color: #fff;
+}
+
+.ng-notifications-type-error {
+    border-bottom: @ng-notifications-error-border;
+    background-color: @ng-notifications-error-bg;
+}
+
+.ng-notifications-type-warning {
+    border-bottom: @ng-notifications-warning-border;
+    background-color: @ng-notifications-warning-bg;
+}
+
+.ng-notifications-type-info {
+    border-bottom: @ng-notifications-info-border;
+    background-color: @ng-notifications-info-bg;
+}
