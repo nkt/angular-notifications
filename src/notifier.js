@@ -1,27 +1,31 @@
 class Notifier {
-    constructor(scope) {
-        this.scope = scope;
-    }
+  constructor(scope) {
+    this.scope = scope;
+  }
 
-    notify(type, message) {
-        this.scope.$broadcast('ngNotifications:notify', type, message);
-    }
+  notify(type, message) {
+    this.scope.$broadcast('ngNotifications:notify', type, message);
+  }
 
-    closeAll() {
-        this.notify('ngNotifications:closeAll');
-    }
+  closeAll() {
+    this.notify('ngNotifications:closeAll');
+  }
 
-    error(message) {
-        this.notify('error', message);
-    }
+  error(message) {
+    this.notify('error', message);
+  }
 
-    warning(message) {
-        this.notify('warning', message);
-    }
+  warning(message) {
+    this.notify('warning', message);
+  }
 
-    info(message) {
-        this.notify('info', message);
-    }
+  info(message) {
+    this.notify('info', message);
+  }
+
+  success(message) {
+    this.notify('success', message);
+  }
 }
 
 module.exports = Notifier;
